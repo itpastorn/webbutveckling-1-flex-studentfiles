@@ -22,5 +22,3 @@ som sådant rekommenderas _inte_.
 De fel som upptäcks i någon av böckerna eller materialet här på GitHub kommer att förklaras och
 korrigeras som __issues__ här i detta projekt. Du är mycket varmt välkommen att öppna en _issue_
 om du själv hittar något fel.
-
-
