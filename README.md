@@ -6,7 +6,13 @@ upplaga och senare.
  * Här finns texter, bilder och påbörjade HTML- och CSS-filer till demowebbplatsen _Läxhjälpen_.
  * Här finns också de filer som behövs för uppgifterna i arbetsboken.
 
-Som läsare kan du bara göra en __fork__ av det här projektet här på GitHub, och sedan därifrån hämta
+## Längre instruktioner
+
+Läs i arbetsboken hur du ska hämta dessa filer.
+
+## Kort instruktion
+
+Du kan göra en __fork__ av det här projektet här på GitHub, och sedan därifrån hämta
 filerna till din egen dator via ''git clone''.
 
 [Så här gör du en fork](https://help.github.com/articles/fork-a-repo/)
