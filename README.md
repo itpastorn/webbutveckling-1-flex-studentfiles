@@ -28,3 +28,38 @@ som sådant rekommenderas _inte_.
 De fel som upptäcks i någon av böckerna eller materialet här på GitHub kommer att förklaras och
 korrigeras som __issues__ här i detta projekt. Du är mycket varmt välkommen att öppna en _issue_
 om du själv hittar något fel.
+
+## Enstaka uppgifter (OBS! Länkar ej klara - TODO)
+
+### Kapitel 4
+
+Uppgift 4C
+ * [kap-4-c.html](todo)
+ * [4C på JSBin](todo)
+ * [4C på CodePen](todo)
+
+Uppgift 4E
+ * [kap-4-e.html](todo)
+ * [4E på JSBin](todo)
+ * [4E på Codepen](todo)
+
+### Kapitel 9
+
+Uppgift 9A
+ * [kap-9-a.html](todo)
+ * [9A på JSBin](todo)
+ * [91 på Codepen](todo)
+
+### Kapitel 10
+
+Uppgift 10A
+ * [kap-10-a.html](todo)
+ * [10A på JSBin](todo)
+ * [10A på Codepen](todo)
+
+Uppgift 10B
+ * [kap-10-b.html](todo)
+ * [10B på JSBin](todo)
+ * [10B på Codepen](todo)
+
+
