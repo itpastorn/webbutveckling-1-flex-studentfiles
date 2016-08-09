@@ -35,7 +35,7 @@ om du själv hittar något fel.
 
 Uppgift 4C
  * [kap-4-c.html](todo)
- * [4C på JSBin](todo)
+ * [4C på JSBin](http://jsbin.com/utijuv/2/edit)
  * [4C på CodePen](todo)
 
 Uppgift 4E
