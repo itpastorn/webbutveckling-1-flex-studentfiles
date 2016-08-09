@@ -56,8 +56,8 @@ Uppgift 9A
 Uppgift 10A
  * [kap-10-a.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-10-a.html)
  * [kap-10-a.css](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-10-a.css)
- * [10A på JSBin](todo)
- * [10A på Codepen](todo)
+ * [10A på JSBin](http://jsbin.com/ifikin/1/edit)
+ * [10A på Codepen](http://codepen.io/itpastorn/pen/JKZqXo)
 
 Uppgift 10B
  * [kap-10-b.html](todo) TODO
