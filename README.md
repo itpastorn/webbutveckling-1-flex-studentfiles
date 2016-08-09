@@ -34,9 +34,9 @@ om du själv hittar något fel.
 ### Kapitel 4
 
 Uppgift 4C
- * [kap-4-c.html](todo)
+ * [kap-4-c.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-4-c.html)
  * [4C på JSBin](http://jsbin.com/utijuv/2/edit)
- * [4C på CodePen](todo)
+ * [4C på CodePen](http://codepen.io/itpastorn/pen/ZOmmjK)
 
 Uppgift 4E
  * [kap-4-e.html](todo)
