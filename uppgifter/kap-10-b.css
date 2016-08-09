@@ -1,0 +1,29 @@
+body {
+    margin: auto;
+    width: 500px;
+    background-color: oldlace;
+}
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+}
+div {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.alpha {
+    background-color: mediumspringgreen;
+    left: 50px;
+    top: 50px;
+}
+.beta {
+    background-color: blueviolet;
+    left: 50px;
+    top: 50px;
+}
