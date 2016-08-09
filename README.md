@@ -39,8 +39,8 @@ Uppgift 4C
  * [4C på CodePen](http://codepen.io/itpastorn/pen/ZOmmjK)
 
 Uppgift 4F
- * [kap-4-f.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-4-e.html)
- * [kap-4-f.css](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-4-e.css)
+ * [kap-4-f.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-4-f.html)
+ * [kap-4-f.css](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-4-f.css)
  * [4F på JSBin](http://jsbin.com/isuyar/edit)
  * [4F på Codepen](http://codepen.io/itpastorn/pen/WxYLqr)
 
