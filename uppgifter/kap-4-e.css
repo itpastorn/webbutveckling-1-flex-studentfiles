@@ -1,0 +1,10 @@
+html {
+    background-color: lightslategrey;
+}
+body {
+    margin: auto;
+    max-width: 500px;
+    padding-bottom: 0.1px; /*knep för div margin */
+}
+h1 {
+}
