@@ -47,16 +47,17 @@ Uppgift 4F
 ### Kapitel 9
 
 Uppgift 9A
- * [kap-9-a.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-9-a.html) TODO
+ * [kap-9-a.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-9-a.html)
  * [9A på JSBin](http://jsbin.com/imaquk/edit)
  * [9A på Codepen](http://codepen.io/itpastorn/pen/grQyyg)
 
 ### Kapitel 10
 
 Uppgift 10A
- * [kap-10-a.html](todo) TODO
- * [10A på JSBin](todo) TODO
- * [10A på Codepen](todo) TODO
+ * [kap-10-a.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-10-a.html)
+ * [kap-10-a.css](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-10-a.css)
+ * [10A på JSBin](todo)
+ * [10A på Codepen](todo)
 
 Uppgift 10B
  * [kap-10-b.html](todo) TODO
