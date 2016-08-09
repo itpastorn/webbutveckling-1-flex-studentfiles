@@ -60,6 +60,11 @@ Uppgift 10A
  * [10A på Codepen](http://codepen.io/itpastorn/pen/JKZqXo)
 
 Uppgift 10B
- * [kap-10-b.html](todo) TODO
- * [10B på JSBin](todo) TODO
- * [10B på Codepen](todo) TODO
+ * [kap-10-b.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-10-b.html)
+ * [kap-10-b.css](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-10-b.css)
+ * [10B på JSBin](http://jsbin.com/itowem/edit)
+ * [10B på Codepen](http://codepen.io/itpastorn/pen/yJqpbw)
+
+Uppgift 12D
+ * [12D på JSBin](http://jsbin.com/buqowuz/edit)
+ * [12D på Codepen](http://codepen.io/itpastorn/pen/NAEkyW)
