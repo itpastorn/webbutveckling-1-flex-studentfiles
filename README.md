@@ -47,9 +47,9 @@ Uppgift 4F
 ### Kapitel 9
 
 Uppgift 9A
- * [kap-9-a.html](todo) TODO
- * [9A på JSBin](todo) TODO
- * [91 på Codepen](todo) TODO
+ * [kap-9-a.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-9-a.html) TODO
+ * [9A på JSBin](http://jsbin.com/imaquk/edit)
+ * [9A på Codepen](http://codepen.io/itpastorn/pen/grQyyg)
 
 ### Kapitel 10
 
