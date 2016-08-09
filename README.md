@@ -39,9 +39,10 @@ Uppgift 4C
  * [4C på CodePen](http://codepen.io/itpastorn/pen/ZOmmjK)
 
 Uppgift 4E
- * [kap-4-e.html](todo) TODO
- * [4E på JSBin](todo) TODO
- * [4E på Codepen](todo) TODO
+ * [kap-4-e.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-4-e.html)
+ * [kap-4-e.css](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-4-e.css)
+ * [4E på JSBin](http://jsbin.com/isuyar/edit)
+ * [4E på Codepen](http://codepen.io/itpastorn/pen/WxYLqr)
 
 ### Kapitel 9
 
