@@ -29,7 +29,7 @@ De fel som upptäcks i någon av böckerna eller materialet här på GitHub komm
 korrigeras som __issues__ här i detta projekt. Du är mycket varmt välkommen att öppna en _issue_
 om du själv hittar något fel.
 
-## Enstaka uppgifter (OBS! Länkar ej klara om de markeras med TODO)
+## Enstaka uppgifter
 
 ### Kapitel 4
 
@@ -66,5 +66,8 @@ Uppgift 10B
  * [10B på Codepen](http://codepen.io/itpastorn/pen/yJqpbw)
 
 Uppgift 12D
+ * [kap-12-d.html](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-4-c.html)
+ * [kap-12-d.css](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-12-d.css)
+ * [kap-12-d.js](https://raw.githubusercontent.com/itpastorn/webbutveckling-1-flex-studentfiles/master/uppgifter/kap-12-d.js)
  * [12D på JSBin](http://jsbin.com/buqowuz/edit)
  * [12D på Codepen](http://codepen.io/itpastorn/pen/NAEkyW)
