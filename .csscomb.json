@@ -1,0 +1,27 @@
+{
+    "exclude": ["node_modules/**"],
+    "verbose": true,
+
+    "color-case": "lower",
+    "color-shorthand": true,
+    "element-case": "lower",
+    "leading-zero": false,
+    "quotes": "single",
+    "unitless-zero": true,
+
+    "space-before-combinator": " ",
+    "space-after-combinator": " ",
+    "space-before-colon": "",
+    "space-after-colon": " ",
+    "space-before-selector-delimiter": "",
+    "space-after-selector-delimiter": "\n",
+    "space-between-declarations": "\n ",
+    "space-before-opening-brace": " ",
+    "space-after-opening-brace": "\n",
+    "space-before-closing-brace": "\n",
+    "always-semicolon": true,
+    "strip-spaces": true,
+    "tab-size": 4,
+    "eof-newline": true,
+    "block-indent": "    "
+}

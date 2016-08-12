@@ -1,0 +1,32 @@
+{
+    "rules": {
+        "eqeqeq": [
+            2, 
+            "allow-null"
+        ],
+        "curly": 2,
+        "quotes": [
+            2, 
+            "double"
+        ],
+        "indent": [
+            2,
+            4
+        ],
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "semi": [
+            2,
+            "always"
+        ]
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true,
+        "jquery": true
+    },
+    "extends": "eslint:recommended"
+}

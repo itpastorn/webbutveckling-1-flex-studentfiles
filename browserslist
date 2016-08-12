@@ -1,0 +1,8 @@
+# List of browsers to be used by tools like cssnano, autoprefixer, etc
+# One common config for all tools
+
+last 2 versions
+> 1%            # Global usage
+> 0.5% in SV    # Usage in Sweden
+Firefox ESR     # Firefox ´version for big organizations
+not ie <= 9     # Forget about old IE while learning webdev
