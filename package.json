@@ -1,0 +1,56 @@
+{
+  "name": "nodeplay",
+  "version": "1.0.0",
+  "description": "Testing Node and Git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itpastorn/nodeplay.git"
+  },
+  "keywords": [
+    "node",
+    "git"
+  ],
+  "author": "gunther@keryx.se",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itpastorn/nodeplay/issues"
+  },
+  "homepage": "https://github.com/itpastorn/nodeplay#readme",
+  "devDependencies": {
+    "browserslist": "^1.3.5",
+    "csscomb": "^3.1.7",
+    "gulp": "^3.9.1",
+    "gulp-a11y": "^0.1.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-csslint": "^0.3.1",
+    "gulp-csslint-report": "^1.0.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-help": "^1.6.1",
+    "gulp-html": "^0.4.4",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-html-validator": "0.0.5",
+    "gulp-html5-lint": "^1.1.0",
+    "gulp-htmlhint": "^0.3.1",
+    "gulp-htmllint": "0.0.9",
+    "gulp-htmltidy": "^0.2.2",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-markdown": "^1.2.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-w3c-css": "^1.0.1",
+    "yargs": "^4.8.1"
+  }
+}
