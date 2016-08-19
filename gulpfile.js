@@ -1,19 +1,19 @@
 "use strict";
-var gulp = require("gulp-help")(require("gulp")),
-    gutil = require("gulp-util"),
-    eslint = require("gulp-eslint"),
-    csslint = require("gulp-csslint"),
-    cssvalidate = require("gulp-w3c-css"),
+var gulp         = require("gulp-help")(require("gulp")),
+    gutil        = require("gulp-util"),
+    eslint       = require("gulp-eslint"),
+    csslint      = require("gulp-csslint"),
+    cssvalidate  = require("gulp-w3c-css"),
     htmlvalidate = require("gulp-html-validator"),
     autoprefixer = require("gulp-autoprefixer"),
-    csscomb = require('gulp-csscomb'),
-    uglify = require('gulp-uglify'),
-    cleancss = require('gulp-clean-css'),
-    imagemin = require('gulp-imagemin'),
-    rename = require("gulp-rename"),
+    csscomb      = require("gulp-csscomb"),
+    uglify       = require("gulp-uglify"),
+    cleancss     = require("gulp-clean-css"),
+    imagemin     = require("gulp-imagemin"),
+    rename       = require("gulp-rename"),
     browserslist = require("browserslist"),
-    argv = require("yargs").argv,
-    map = require("map-stream");
+    argv         = require("yargs").argv,
+    map          = require("map-stream");
 
 var paths = {
     cssdir     : "testcss/*.css",
@@ -46,7 +46,7 @@ gulp.task("css:lint", "Kontroll av CSS med CSSLint", () =>
 gulp.task("css:valid", "Kontroll av CSS med W3C:s validator, använd --warn för att få med varningar",  () =>
     gulp.src(paths.cssdir)
         .pipe(cssvalidate())
-        .on('end', function(){ gutil.log("Validering klar - vad hände?"); })
+        .on("end", function(){ gutil.log("Validering klar - vad hände?"); })
         .pipe(map(function(file, done) {
             if (file.contents.length === 0) {
                 gutil.log("Success: " + file.path);
@@ -123,7 +123,7 @@ gulp.task("css:prefix", "Lägg till rätt prefix med autoprefixer", () =>
 
 gulp.task("css:unprefix", "Ta bort alla prefix", () =>
     gulp.src(paths.cssdir)
-        .pipe(autoprefixer( { browsers: ['last 1 version', 'not ie <= 11', "not safari <= 100", "not ff <= 100", "not chrome <= 100"] } ))
+        .pipe(autoprefixer( { browsers: ["last 1 version", "not ie <= 11", "not safari <= 100", "not ff <= 100", "not chrome <= 100"] } ))
         .pipe(rename( (file) =>
             file.basename += ".unprefixed"
         ))
@@ -139,7 +139,7 @@ gulp.task("css:comb", "Gör din CSS snygg och fin", () =>
         .pipe(gulp.dest(paths.destdir + "/css"))
 );
 
-gulp.task('uglify', 'Minska storleken på skript', () =>
+gulp.task("uglify", "Minska storleken på skript", () =>
     gulp.src(paths.scriptsdir)
         .pipe(rename( (file) =>
             file.basename += ".min"
@@ -157,7 +157,7 @@ gulp.task("css:clean", "Minska storleken på CSS-filer med clean-css", () =>
         .pipe(gulp.dest(paths.destdir + "/css"))
 );
 
-gulp.task('images', 'Optimera filstorleken på bilder', () =>
+gulp.task("images", "Optimera filstorleken på bilder", () =>
     gulp.src(paths.imagesdir)
         .pipe(imagemin({optimizationLevel: 5}))
         .pipe(gulp.dest(paths.destdir + "/img"))
