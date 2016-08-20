@@ -1,5 +1,8 @@
-# PhpStorm
+# PhpStorm, Eclipse
 .idea
+.project
+
+# Sök på webben efter "gitignore [namnet på din editor eller IDE]" och lägg till fler
 
 # Nivo
 laxhjalpen/html/css/themes
@@ -42,3 +45,6 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Gulp output
+build

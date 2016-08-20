@@ -16,10 +16,10 @@ var gulp         = require("gulp-help")(require("gulp")),
     map          = require("map-stream");
 
 var paths = {
-    cssdir     : "testcss/*.css",
-    htmldir    : "testhtml/*.html",
-    scriptsdir : "testscripts/*.js",
-    imagesdir  : "testimg/*",
+    cssdir     : ["./**/*.css", "!node_modules/**/*.css", "!build/**/*.css"],
+    htmldir    : ["./**/*.html", "!node_modules/**/*.html", "!build/**/*.html"],
+    scriptsdir : ["./**/*.js", "!node_modules/**/*.js", "!build/**/*.js", "!gulpfile.js"],
+    imagesdir  : ["./**/img/*", "!node_modules/**/*.img", "!build/**/*.img"],
     destdir    : "build"
 };
 
@@ -27,6 +27,7 @@ gulp.task("hello", "Säger hej", () =>
     gutil.log("Hej på dig, du!")
 );
 
+// Alla kommandon nedan använder ES6 arrow functions
 gulp.task("eslint", "Kontroll av JavaScript med ESLint", () =>
     gulp.src(paths.scriptsdir)
         .pipe(eslint({
@@ -46,13 +47,12 @@ gulp.task("css:lint", "Kontroll av CSS med CSSLint", () =>
 gulp.task("css:valid", "Kontroll av CSS med W3C:s validator, använd --warn för att få med varningar",  () =>
     gulp.src(paths.cssdir)
         .pipe(cssvalidate())
-        .on("end", function(){ gutil.log("Validering klar - vad hände?"); })
+        .on("end", function(){ gutil.log("Validering klar"); })
         .pipe(map(function(file, done) {
             if (file.contents.length === 0) {
                 gutil.log("Success: " + file.path);
                 gutil.log(gutil.colors.green("No errors or warnings\n"));
             } else {
-                gutil.log("Problem fanns");
                 var results = JSON.parse(file.contents.toString());
                 results.errors.forEach(function(error) {
                     gutil.log("Error: " + file.path + ": line " + error.line);
@@ -63,6 +63,9 @@ gulp.task("css:valid", "Kontroll av CSS med W3C:s validator, använd --warn för
                         gutil.log("Warning: " + file.path + ": line " + warning.line);
                         gutil.log(gutil.colors.yellow(warning.message) + "\n");
                     });
+                } else if ( results.warnings.length ) {
+                    gutil.log("Varning i: " + gutil.colors.yellow(file.path));
+                    gutil.log("Använd flaggan --warn för att se varningar");
                 }
             }
             done(null, file);
@@ -118,7 +121,7 @@ gulp.task("css:prefix", "Lägg till rätt prefix med autoprefixer", () =>
         .pipe(rename( (file) =>
             file.basename += ".prefixed"
         ))
-        .pipe(gulp.dest(paths.destdir + "/css"))
+        .pipe(gulp.dest(paths.destdir))
 );
 
 gulp.task("css:unprefix", "Ta bort alla prefix", () =>
@@ -127,7 +130,7 @@ gulp.task("css:unprefix", "Ta bort alla prefix", () =>
         .pipe(rename( (file) =>
             file.basename += ".unprefixed"
         ))
-        .pipe(gulp.dest(paths.destdir + "/css"))
+        .pipe(gulp.dest(paths.destdir))
 );
 
 gulp.task("css:comb", "Gör din CSS snygg och fin", () =>
@@ -136,7 +139,7 @@ gulp.task("css:comb", "Gör din CSS snygg och fin", () =>
         .pipe(rename( (file) =>
             file.basename += ".combed"
         ))
-        .pipe(gulp.dest(paths.destdir + "/css"))
+        .pipe(gulp.dest(paths.destdir))
 );
 
 gulp.task("uglify", "Minska storleken på skript", () =>
@@ -145,7 +148,7 @@ gulp.task("uglify", "Minska storleken på skript", () =>
             file.basename += ".min"
         ))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.destdir + "/scripts"))
+        .pipe(gulp.dest(paths.destdir))
 );
 
 gulp.task("css:clean", "Minska storleken på CSS-filer med clean-css", () =>
@@ -154,13 +157,13 @@ gulp.task("css:clean", "Minska storleken på CSS-filer med clean-css", () =>
             file.basename += ".min"
         ))
         .pipe(cleancss())
-        .pipe(gulp.dest(paths.destdir + "/css"))
+        .pipe(gulp.dest(paths.destdir))
 );
 
 gulp.task("images", "Optimera filstorleken på bilder", () =>
     gulp.src(paths.imagesdir)
         .pipe(imagemin({optimizationLevel: 5}))
-        .pipe(gulp.dest(paths.destdir + "/img"))
+        .pipe(gulp.dest(paths.destdir))
 );
 
 gulp.task("default", "Denna körs om du inte anger något argument", [], () =>
@@ -168,7 +171,7 @@ gulp.task("default", "Denna körs om du inte anger något argument", [], () =>
 );
 
 gulp.task("watch", "Bevakar kataloger och kör grundkontroller, avsluta med CTRL + C", () => {
-    gulp.watch(paths.html, ["htmlvalid"]);
-    gulp.watch(paths.css, ["cssvalid"]);
-    gulp.watch(paths.scripts, ["eslint"]);
+    gulp.watch(paths.htmldir, ["hello"]);
+    gulp.watch(paths.cssdir, ["css:valid"]);
+    gulp.watch(paths.scriptsdir, ["eslint"]);
 });
