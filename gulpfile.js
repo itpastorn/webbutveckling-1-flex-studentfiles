@@ -171,7 +171,7 @@ gulp.task("default", "Denna körs om du inte anger något argument", [], () =>
 );
 
 gulp.task("watch", "Bevakar kataloger och kör grundkontroller, avsluta med CTRL + C", () => {
-    gulp.watch(paths.htmldir, ["hello"]);
+    gulp.watch(paths.htmldir, ["html:valid"]);
     gulp.watch(paths.cssdir, ["css:valid"]);
     gulp.watch(paths.scriptsdir, ["eslint"]);
 });
