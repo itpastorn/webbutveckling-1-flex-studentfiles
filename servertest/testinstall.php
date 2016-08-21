@@ -9,7 +9,7 @@
 header("Content-type: text/html; charset=utf-8");
 
 $haserrors = false;
-// PHP version >= 5.4
+// PHP version >= 7.0
 $phpversionstatus = phpversion();
 $phpversionclass  = "ok";
 if ( PHP_VERSION_ID < 70008 ) {
@@ -52,6 +52,28 @@ if ( !function_exists("collator_create") ) {
     $intlstatus .= $tips;
 }
 
+// Fel ska visas
+$derrstatus = "Fel visas (display_errors är aktiverat)";
+$derrclass  = "ok";
+if ( ini_get("display_errors") != 1 ) {
+    $derrstatus = "Fel visas inte (display_errors är inte aktiverat)";
+    $derrclass  = "fail";
+    $haserrors = true;
+}
+
+// Alla fel ska rapporteras
+$rerrstatus = "Felrapporteringen är maximal. (error_reporting är ";
+$rerrclass  = "ok";
+if ( error_reporting() == E_ALL ) {
+    $rerrstatus .= "E_ALL)";
+} elseif ( error_reporting() == -1 ) {
+    $rerrstatus .= "-1)";
+} else {
+    $rerrstatus = "Felrapporteringen är inte maximal. (error_reporting ska vara -1 eller E_ALL)";
+    $rerrclass  = "fail";
+    $haserrors  = true;
+}
+
 $tot_status = "<p>Installationen har lyckats och alla delar finns på plats.</p>";
 if ( $haserrors ) {
     $tot_status = "<p class='fail'>Installationen behöver komletteras.</p>";
@@ -59,6 +81,7 @@ if ( $haserrors ) {
 
 ?>
 <!DOCTYPE html>
+<!--suppress CssUnusedSymbol -->
 <html lang="sv">
 <head>
   <meta charset="utf-8" />
@@ -133,6 +156,24 @@ echo <<<HTML
 HTML;
 ?>
         <td>16</td>
+      </tr>
+      <tr>
+          <th scope="row">display_errors</th>
+          <?php
+          echo <<<HTML
+          <td class="{$derrclass}">{$derrstatus}</td>
+HTML;
+          ?>
+          <td>Alla</td>
+      </tr>
+      <tr>
+          <th scope="row">error_reporting</th>
+          <?php
+          echo <<<HTML
+          <td class="{$rerrclass}">{$rerrstatus}</td>
+HTML;
+          ?>
+          <td>Alla</td>
       </tr>
   </table>
 </body>
