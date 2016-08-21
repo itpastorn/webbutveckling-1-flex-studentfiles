@@ -1,6 +1,5 @@
 "use strict";
 var gulp         = require("gulp-help")(require("gulp")),
-    gutil        = require("gulp-util"),
     eslint       = require("gulp-eslint"),
     csslint      = require("gulp-csslint"),
     cssvalidate  = require("gulp-w3c-css"),
@@ -10,6 +9,8 @@ var gulp         = require("gulp-help")(require("gulp")),
     uglify       = require("gulp-uglify"),
     cleancss     = require("gulp-clean-css"),
     imagemin     = require("gulp-imagemin"),
+    gutil        = require("gulp-util"),
+    cache        = require("gulp-cached"),
     rename       = require("gulp-rename"),
     browserslist = require("browserslist"),
     argv         = require("yargs").argv,
@@ -30,6 +31,7 @@ gulp.task("hello", "Säger hej", () =>
 // Alla kommandon nedan använder ES6 arrow functions
 gulp.task("eslint", "Kontroll av JavaScript med ESLint", () =>
     gulp.src(paths.scriptsdir)
+        .pipe(cache("eslint"))
         .pipe(eslint({
             configFile: ".eslintrc"
         }))
@@ -46,6 +48,7 @@ gulp.task("css:lint", "Kontroll av CSS med CSSLint", () =>
 // http://stackoverflow.com/questions/38836082/how-can-i-pipe-the-output-from-gulp-w3c-css-to-the-console
 gulp.task("css:valid", "Kontroll av CSS med W3C:s validator, använd --warn för att få med varningar",  () =>
     gulp.src(paths.cssdir)
+        .pipe(cache("css:valid"))
         .pipe(cssvalidate())
         .on("end", function(){ gutil.log("Validering klar"); })
         .pipe(map(function(file, done) {
@@ -74,6 +77,7 @@ gulp.task("css:valid", "Kontroll av CSS med W3C:s validator, använd --warn för
 
 gulp.task("html:valid", "Kontroll av HTML med W3C:s validator", () =>
     gulp.src(paths.htmldir)
+        .pipe(cache("html:valid"))
         .pipe(htmlvalidate())
         .pipe(map(function(file, done) {
             var messages = JSON.parse(file.contents.toString()).messages;
@@ -171,6 +175,7 @@ gulp.task("default", "Denna körs om du inte anger något argument", [], () =>
 );
 
 gulp.task("watch", "Bevakar kataloger och kör grundkontroller, avsluta med CTRL + C", () => {
+    gutil.log(gutil.colors.yellow("Watch första genomkörning tar några minuter."));
     gulp.watch(paths.htmldir, ["html:valid"]);
     gulp.watch(paths.cssdir, ["css:valid"]);
     gulp.watch(paths.scriptsdir, ["eslint"]);
