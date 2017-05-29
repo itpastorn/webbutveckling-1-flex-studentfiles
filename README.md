@@ -29,6 +29,11 @@ De fel som upptäcks i någon av böckerna eller materialet här på GitHub komm
 korrigeras som __issues__ här i detta projekt. Du är mycket varmt välkommen att öppna en _issue_
 om du själv hittar något fel.
 
+## Uppgifter som en samling på CodePen
+
+[Samlingen på CodePen](https://codepen.io/collection/AyVgwv/).
+Du kan också [Prenumerera på den via RSS](https://codepen.io/collection/AyVgwv/feed).
+
 ## Enstaka uppgifter
 
 ### Kapitel 4
