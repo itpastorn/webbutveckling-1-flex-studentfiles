@@ -65,7 +65,9 @@ lib-cov
 build/Release
 
 # Dependency directories
-node_modules
+!node_modules
+node_modules/*
+!node_modules/fyll-denna-katalog-med-npm-install.md
 jspm_packages
 
 # Optional npm cache directory
