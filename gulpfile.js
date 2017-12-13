@@ -1,5 +1,5 @@
 "use strict";
-var gulp         = require("gulp-help")(require("gulp")),
+let gulp         = require("gulp-help")(require("gulp")),
     eslint       = require("gulp-eslint"),
     csslint      = require("gulp-csslint"),
     cssvalidate  = require("gulp-w3c-css"),
@@ -16,7 +16,7 @@ var gulp         = require("gulp-help")(require("gulp")),
     argv         = require("yargs").argv,
     map          = require("map-stream");
 
-var paths = {
+let  paths = {
     cssdir     : ["./**/*.css", "!node_modules/**/*.css", "!build/**/*.css"],
     htmldir    : ["./**/*.html", "!node_modules/**/*.html", "!build/**/*.html"],
     scriptsdir : ["./**/*.js", "!node_modules/**/*.js", "!build/**/*.js", "!gulpfile.js"],
@@ -56,7 +56,7 @@ gulp.task("css:valid", "Kontroll av CSS med W3C:s validator, använd --warn för
                 gutil.log("Success: " + file.path);
                 gutil.log(gutil.colors.green("No errors or warnings\n"));
             } else {
-                var results = JSON.parse(file.contents.toString());
+                let  results = JSON.parse(file.contents.toString());
                 results.errors.forEach(function(error) {
                     gutil.log("Error: " + file.path + ": line " + error.line);
                     gutil.log(gutil.colors.red(error.message) + "\n");
@@ -80,13 +80,13 @@ gulp.task("html:valid", "Kontroll av HTML med W3C:s validator", () =>
         .pipe(cache("html:valid"))
         .pipe(htmlvalidate())
         .pipe(map(function(file, done) {
-            var messages = JSON.parse(file.contents.toString()).messages;
+            let  messages = JSON.parse(file.contents.toString()).messages;
             if (messages.length === 0) {
                 gutil.log("Success: " + file.path);
                 gutil.log(gutil.colors.green("Inga problem funna\n"));
             } else {
                 gutil.log("Problem upptäckta i " + file.path + "\n");
-                for ( var msg of messages ) {
+                for ( let  msg of messages ) {
                     gutil.log("Fil: " + file.path);
                     if ( msg.firstLine ) {
                         gutil.log("Rader: " + msg.firstLine + " till " + msg.lastLine);
